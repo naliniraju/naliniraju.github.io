@@ -810,7 +810,7 @@ module.exports = " .spacer {\r\n  flex: 1 1 auto;\r\n}\r\nspan:focus {\r\n  out
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar color=\"primary\">\r\n  <mat-toolbar-row>\r\n    <span routerLink=\"/\">ng-blog</span>\r\n    <span class=\"spacer\"></span>\r\n    <button routerLink=\"/dashboard\" mat-raised-button color=\"accent\">Write a Post</button>\r\n    <div *ngIf=\"auth.afAuth.authState | async as user; else showLogin\">\r\n      <button (click)=\"auth.logout()\" mat-button>Logout</button>\r\n    </div>\r\n    <ng-template #showLogin>\r\n      <button (click)=\"auth.login()\" mat-button>Login with Google</button>\r\n    </ng-template>\r\n  </mat-toolbar-row>\r\n</mat-toolbar>\r\n"
+module.exports = "<mat-toolbar color=\"primary\">\r\n  <mat-toolbar-row>\r\n    <span routerLink=\"/\">My-Blog</span>\r\n    <span class=\"spacer\"></span>\r\n    <button routerLink=\"/dashboard\" mat-raised-button color=\"accent\">Write a Post</button>\r\n    <div *ngIf=\"auth.afAuth.authState | async as user; else showLogin\">\r\n      <button (click)=\"auth.logout()\" mat-button>Logout</button>\r\n    </div>\r\n    <ng-template #showLogin>\r\n      <button (click)=\"auth.login()\" mat-button>Login with Google</button>\r\n    </ng-template>\r\n  </mat-toolbar-row>\r\n</mat-toolbar>\r\n"
 
 /***/ }),
 
