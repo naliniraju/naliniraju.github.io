@@ -115,12 +115,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./shared/shared.module */ "./src/app/shared/shared.module.ts");
 /* harmony import */ var _posts_posts_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./posts/posts.module */ "./src/app/posts/posts.module.ts");
 /* harmony import */ var _routing_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./routing.module */ "./src/app/routing.module.ts");
+/* harmony import */ var _angular_service_worker__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/service-worker */ "./node_modules/@angular/service-worker/fesm5/service-worker.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -150,7 +152,8 @@ var AppModule = /** @class */ (function () {
                 _core_core_module__WEBPACK_IMPORTED_MODULE_9__["CoreModule"],
                 _shared_shared_module__WEBPACK_IMPORTED_MODULE_10__["SharedModule"],
                 _posts_posts_module__WEBPACK_IMPORTED_MODULE_11__["PostsModule"],
-                _routing_module__WEBPACK_IMPORTED_MODULE_12__["RoutingModule"]
+                _routing_module__WEBPACK_IMPORTED_MODULE_12__["RoutingModule"],
+                _angular_service_worker__WEBPACK_IMPORTED_MODULE_13__["ServiceWorkerModule"].register('/ngsw-worker.js', { enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_7__["environment"].production })
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
@@ -554,7 +557,7 @@ var PostDetailComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "section {\r\n  display: -ms-grid;\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));\r\n  -ms-grid-rows: auto;\r\n      grid-template-rows: auto;\r\n  grid-gap: 10px;\r\n  margin: 0 auto;\r\n  max-width: 90%;\r\n}\r\nmat-card {\r\n  margin: 10px 0;\r\n}\r\n"
+module.exports = "section {\r\n  display: grid;\r\n  display: -ms-grid;\r\n  -ms-grid-columns: 1fr 1fr 1fr 1fr;             /* adjusted */\r\n  grid-template-columns:  repeat( 3, 1fr );\r\n  -ms-grid-rows: auto;\r\n      grid-template-rows: auto;\r\n  grid-gap: 20px;\r\n  margin: 0 auto;\r\n  max-width: 96%;\r\n}\r\nmat-card {\r\n  margin: 10px 0;\r\n}\r\n"
 
 /***/ }),
 
